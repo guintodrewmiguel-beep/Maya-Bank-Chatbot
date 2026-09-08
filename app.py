@@ -63,6 +63,103 @@ PROMPT_VARIANTS = {
 
 
 st.set_page_config(page_title="Maya Bank T&C Chatbot", page_icon="💬")
+
+# --- Maya brand theme (mint green + deep purple, matching the Maya website) ---
+st.markdown(
+    """
+    <style>
+    :root {
+        --maya-green: #7EE2A8;
+        --maya-green-dark: #56D191;
+        --maya-purple: #3B1573;
+        --maya-black: #0E0E0E;
+    }
+
+    /* App background */
+    .stApp {
+        background-color: #FFFFFF;
+    }
+
+    /* Top banner strip mimicking Maya's nav bar */
+    .stApp::before {
+        content: "";
+        display: block;
+        height: 8px;
+        background-color: var(--maya-green);
+        margin: -1rem -1rem 1rem -1rem;
+    }
+
+    /* Titles and headers in Maya purple */
+    h1, h2, h3, .stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
+        color: var(--maya-purple) !important;
+        font-weight: 800 !important;
+    }
+
+    /* Caption / body text */
+    p, .stMarkdown, .stCaption, label, span {
+        color: #1A1A1A;
+    }
+
+    /* Sidebar styled like Maya's light panel with green accent border */
+    section[data-testid="stSidebar"] {
+        background-color: #F4FBF7;
+        border-right: 3px solid var(--maya-green);
+    }
+    section[data-testid="stSidebar"] h2, section[data-testid="stSidebar"] h3 {
+        color: var(--maya-purple) !important;
+    }
+
+    /* Radio buttons - green accent */
+    div[role="radiogroup"] label span {
+        color: #1A1A1A !important;
+    }
+
+    /* Buttons styled like Maya's black pill button */
+    .stButton > button {
+        background-color: var(--maya-black);
+        color: #FFFFFF;
+        border-radius: 999px;
+        border: none;
+        font-weight: 600;
+        padding: 0.5rem 1.5rem;
+    }
+    .stButton > button:hover {
+        background-color: var(--maya-purple);
+        color: #FFFFFF;
+    }
+
+    /* Chat input box */
+    .stChatInput textarea, div[data-testid="stChatInput"] {
+        border: 2px solid var(--maya-green) !important;
+        border-radius: 999px !important;
+    }
+
+    /* User chat bubble - mint green */
+    div[data-testid="stChatMessage"]:has(div[data-testid="stChatMessageAvatarUser"]) {
+        background-color: #E9FBF1;
+        border-radius: 14px;
+        padding: 0.5rem;
+    }
+
+    /* Assistant chat bubble - light purple tint */
+    div[data-testid="stChatMessage"]:has(div[data-testid="stChatMessageAvatarAssistant"]) {
+        background-color: #F5F1FB;
+        border-radius: 14px;
+        padding: 0.5rem;
+    }
+
+    /* Links */
+    a { color: var(--maya-purple) !important; }
+
+    /* Alerts (info/warning) tinted to match palette */
+    div[data-testid="stAlert"] {
+        border-left: 5px solid var(--maya-green);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 st.title("💬 Maya Bank Terms & Conditions Chatbot")
 st.caption(
     "A domain-specific RAG chatbot answering questions strictly from Maya Bank's "
