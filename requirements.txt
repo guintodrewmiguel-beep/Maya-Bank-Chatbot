@@ -3,6 +3,6 @@ langchain<1.0
 langchain-community<1.0
 langchain-groq
 langchain-huggingface
+sentence-transformers
 chromadb
 pypdf
-unstructured

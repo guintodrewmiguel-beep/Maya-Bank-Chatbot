@@ -11,15 +11,15 @@ maya_bank_savings_terms_conditions.txt), e.g.:
 
     streamlit run app.py
 
-Requirements (same as the notebook, plus streamlit):
+Requirements (see requirements.txt):
     pip install streamlit "langchain<1.0" "langchain-community<1.0" \
-        langchain-groq langchain-huggingface chromadb pypdf unstructured
+        langchain-groq langchain-huggingface sentence-transformers chromadb pypdf
 """
 
 import os
 import streamlit as st
 
-from langchain_community.document_loaders import DirectoryLoader
+from langchain_community.document_loaders import TextLoader, PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
@@ -118,8 +118,14 @@ def build_retriever():
     if not os.path.isdir(DATA_DIR) or not os.listdir(DATA_DIR):
         return None
 
-    loader = DirectoryLoader(f"{DATA_DIR}/", glob="**/*.*", show_progress=False)
-    raw_documents = loader.load()
+    raw_documents = []
+    for root, _, files in os.walk(DATA_DIR):
+        for fname in files:
+            fpath = os.path.join(root, fname)
+            if fname.lower().endswith(".txt"):
+                raw_documents.extend(TextLoader(fpath, encoding="utf-8").load())
+            elif fname.lower().endswith(".pdf"):
+                raw_documents.extend(PyPDFLoader(fpath).load())
 
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
     documents = text_splitter.split_documents(raw_documents)
