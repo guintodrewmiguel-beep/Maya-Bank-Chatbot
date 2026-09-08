@@ -1,0 +1,183 @@
+MAYA BANK - CONSUMER DEPOSIT (SAVINGS) TERMS AND CONDITIONS
+Source: https://www.mayabank.ph/savings/terms-conditions/
+
+1. GENERAL TERMS AND CONDITIONS
+
+1.1 These terms and conditions ("T&C" or "Terms") govern the terms under which you may access and use the products of Maya Bank, Inc. By opening a consumer savings account and/or using our services, you agree to be bound by these Terms. The General Terms and Conditions (GT&Cs) of Maya Bank are deemed incorporated into these T&C. In case of conflict, the terms of these T&C shall prevail.
+
+1.2 The terms "Maya Bank," "Bank," "we," "us," and "our" refer to Maya Bank, Inc., a Filipino digital bank duly licensed by the Bangko Sentral ng Pilipinas ("BSP").
+
+1.3 The terms "you" and "your" refer to the depositor who uses the services of Maya Bank as depositary bank.
+
+1.4 These T&C are effective, valid, and binding from the time you signify agreement, and remain in force until terminated, save for provisions that remain effective after termination.
+
+2. DEFINITION OF TERMS
+
+2.1 Account Holder - an individual who maintains any deposit or savings account with Maya Bank.
+2.2 Affiliates - entities under the MVP Group of Companies, including Maya Philippines, Inc., PLDT, Inc., Metro Pacific Investments Corporation, Smart Communications, Inc., Meralco, Maynilad Water Services, Metro Pacific Tollways Corporation, and MediaQuest Holdings.
+2.3 AMLA - the Anti-Money Laundering Act (Republic Act No. 9160, as amended).
+2.4 Disputed transaction - a transaction reported or reasonably believed to be unusual, without clear economic purpose, from an unknown or illegal source, or facilitated through fraud or crime.
+2.5 Dormant Account - a savings account with no client-initiated deposit or withdrawal for two (2) years.
+2.6 Maya Bank Account/Account - your savings account with Maya Bank.
+2.7 Maya App - the mobile application interface between the account holder and their Maya Bank Account.
+2.8 Maya Savings - a deposit product allowing deposits and withdrawals at any time without penalty, with interest computed on average daily balance (ADB).
+2.9 Personal Goal/s - a goal-based deposit account for up to 180 days, earning interest based on ADB.
+2.10 Time Deposit Plus - a goal and time-based deposit account with fixed tenors of 3, 6, or 12 months.
+2.11 Maya Wallet Account - a reloadable electronic wallet storing PHP value, linked to the Account Holder's mobile number.
+2.12 Maya Consumer Lending Products - loan products including Maya Credit Card, Easy Credit, and Personal Loan.
+2.13 Security Deposit - an interest-bearing deposit account opened solely to be issued a Secured Credit Card.
+
+3. OPENING OF AN ACCOUNT
+
+3.1 Accounts may be opened subject to Maya Bank's sole discretion and verification, in accordance with BSP onboarding and due diligence requirements, AMLA, and applicable laws. Requirements may include: full name and/or PhilSys Number; date and place of birth; address; contact number/email; citizenship; source of funds; nature of work; specimen signature or biometrics; and one primary or two secondary valid IDs.
+
+4. MAINTENANCE OF ACCOUNT
+
+4.1 Withdrawals must be made through modes provided by Maya Bank, subject to partner entity procedures.
+
+4.2 You must maintain a minimum monthly average daily balance (ADB), reasonably determined by Maya Bank. Failure to maintain this for at least two consecutive months results in a maintenance fee.
+
+4.3 Maya Bank shall notify you of fee impositions or revisions applicable to account maintenance, processing, or closure. Maya Bank is authorized to debit applicable service charges, fees, and penalties from your Accounts.
+
+4.4 Unpaid charges or fees become immediately due and may be debited without prior notice, including in cases of erroneous, fraudulent, or unlawful crediting. You will be notified of such deductions within a reasonable period.
+
+4.5 Interest-bearing accounts earn interest per annum at a rate agreed with Maya Bank, subject to applicable laws. Rates may change based on activity or promotions, taking effect only after notice. No interest accrues on dormant accounts.
+
+4.6 Maya Savings earns interest daily, credited the next day minus applicable taxes. Personal Goal and Time Deposit Plus accounts earn interest monthly, credited on the first calendar day of the succeeding month.
+
+4.7 FATCA-reportable Account holders must identify themselves as such, provide their U.S. Tax Identification Number, and provide other required documents, declaring under penalty of perjury that information is true and waiving bank secrecy rights as required by FATCA. Failure to comply may result in withholding or account closure.
+
+4.8 Article 1250 of the Civil Code of the Philippines (regarding extraordinary inflation/deflation) shall not apply.
+
+4.9 A Maya Savings Account with no client-initiated deposit or withdrawal for two (2) years, after required notifications, is considered dormant. Dormancy fees may be imposed after five (5) years from the last transaction. Accounts with no remaining balance at the time of dormancy may be automatically closed with notice. Dormant accounts earn no interest, bonus, or benefit, and no inward or outward transfers are permitted, though reactivation is possible (which may require resubmission of due diligence documents). Any account with a remaining balance dormant for ten (10) years is included in the list of unclaimed balances submitted to the Treasurer of the Republic of the Philippines, subject to escheat under the Unclaimed Balances Act.
+
+5. GENERAL TERMS OF SERVICE
+
+5.1 Maya Bank agrees to act as a depositary bank for your interest- or non-interest-bearing deposit account.
+
+5.2 Applicable PDIC laws and rules govern deposits, which are insured up to a maximum of One Million Pesos (PHP 1,000,000.00) per depositor. PDIC presumes the name on the certificate of deposit to be the actual/beneficial owner, except as otherwise provided.
+
+5.3 Maya Bank's office hours are 9 AM to 6 PM, Mondays to Fridays. Online platforms are available 24/7, subject to partner cut-off times, with advance notice of maintenance activities.
+
+5.4 Maya Bank reserves the right to modify, suspend, stop, or terminate services immediately upon notice, within applicable Philippine laws and regulations.
+
+5.5 You will not use any device, software, or routine to interfere with the intended working behavior of the Maya App.
+
+5.6 Maya Bank reserves the right to verify activity related to AMLA or other laws. Pursuant to AMLA IRR, you grant Maya Bank authority to report covered and suspicious transactions to the AMLC, and to maintain records for five (5) years from the transaction date (or account closure date for closed accounts), or longer if required by law or in the event of dispute or litigation.
+
+5.7 Transactions may be delayed or cancelled for reasons including identity verification, instruction validation, business hour/currency variations, system availability, or legal compliance.
+
+5.8 Maya Bank may refuse or cancel transactions if it cannot verify your identity or the recipient's identity, if you fail to comply with information requests, if it reasonably believes its facilities are being misused, or if it determines the account is being used by someone other than the Account Holder to commit fraud, cyberattacks, or money laundering.
+
+5.9 If a transaction is executed per your (incorrect) instructions, Maya Bank is not liable for the incorrect execution, though it will make reasonable efforts (for a reasonable fee) to recover funds.
+
+5.10 Unless restrained by BSP or court order, Maya Bank may automatically suspend or block a transaction or account it has reason to believe is illegal, fraudulent, suspicious, unauthorized, or linked to another suspended account (such as a Maya Wallet). You hold Maya Bank free and harmless against consequences of such suspension or blocking.
+
+5.11 Fees and charges follow the Table of Fees and Charges posted on Maya Bank's website/support portal, subject to change at Maya Bank's discretion in accordance with law.
+
+5.12 Changes to fees and charges take effect per notice, complying with applicable notice requirements.
+
+5.13 Maya Bank reserves the right to require further information or evidence relating to your personal information or the purpose of any transaction.
+
+5.14 If your Maya Wallet has insufficient balance for a transaction but your Maya Savings has sufficient funds, you authorize Maya Bank to automatically transfer the necessary amount from Savings to Wallet.
+
+6. YOUR OBLIGATIONS
+
+6.1-6.18 You agree to: abide by obligations under penalty of charges, suspension, or termination; not use automated tools (deep-links, scrapers, robots) to access or copy app content; not gain unauthorized access to the Maya App or harvest other users' information; not circumvent security features; not probe or test system vulnerabilities; use the app solely for personal, intended purposes without unauthorized copying or distribution; not overload app infrastructure; not use defamatory, obscene, or trademark-infringing names; not interfere with app functioning or transactions; provide true and updated identity information (with criminal liability under the Anti-Alias Law for concealment); update personal information as required; treat confirmed transactions as final and irreversible (with a defined dispute process for unauthorized/erroneous transactions); not use the account for illegal purposes or transfer it to third parties; keep the app updated and device secure from malware; keep your PIN, Password, OTP, and biometrics secure (with fraudulent use by your agents or representatives being your sole responsibility); report loss or theft of a device/SIM or fraud immediately, with prior transactions remaining your liability until reported; consent to Maya Bank's processing and sharing of personal information with affiliates, credit bureaus (e.g., TransUnion, CIC, CIBI, CRIF), and other parties as required; and waive bank secrecy rights under RA 8791 and RA 1405 for specified legitimate purposes (account updates, identity validation, business operations, customer service, credit/fraud checks, dispute settlement, legal compliance, marketing/credit scoring, and other lawful purposes).
+
+7. USER REPRESENTATION AND WARRANTIES
+
+7.1 You warrant that information provided is true, correct, and accurate, and agree to inform Maya Bank of changes within fifteen (15) days.
+
+7.2 You take sole responsibility for consequences of using the Maya App and agree to indemnify Maya Bank for damages resulting from use contrary to these Terms.
+
+7.3 Pursuant to AFASA (RA 12010), Maya Bank may temporarily hold funds subject to a disputed transaction as prescribed by law and BSP regulations, without incurring administrative, criminal, or civil liability for doing so. Upon conclusion of investigation or court/BSP order, Maya Bank may permanently hold, suspend, freeze, or block access to disputed funds.
+
+8. RESERVED RIGHTS
+
+8.1-8.13 Maya Bank reserves the right to: deny access or discontinue services, and reject/suspend/freeze applications or transactions for false or incomplete information or violations; collect, screen, filter, or remove user-provided information (including device/IP data); enhance or modify app features without prior notice; verify user information through third-party providers; send service notices via SMS/email/in-app (with warnings about smishing, phishing, and vishing scams impersonating Maya Bank — legitimate emails come only from @maya.ph or @mayabank.ph, and Maya Bank will never request OTPs, passwords, PINs, or CVVs via SMS, email, call, or chat); set or change fees and taxes upon notice; enforce these Terms including via law enforcement action; limit, suspend, or refuse services based on legal compliance, risk assessment (AML/CFT, fraud, cybersecurity), or business judgment (with such action not being arbitrary and subject to notice/appeal where feasible); debit amounts mistakenly or fraudulently credited to your account; comply with court/authority orders for garnishment or freezing of accounts; take necessary action (including freezing or interpleader suits) in the event of ownership disputes or freeze requests; and offset amounts due from your Maya Savings/Wallet if you are a Maya director, officer, employee, vendor, or service provider with outstanding obligations (with notification of any offsetting).
+
+9. CLOSING OF ACCOUNT
+
+9.1 You may close your Account upon submission of necessary documents; a nominal charge applies if closed within thirty (30) days of opening.
+
+9.2 Maya Bank may immediately close your Account with notice if: the balance is zero and dormant; the account is used for fraud or illegal activity; closure is reasonable to protect Maya Bank's interest; or for security, policy, or regulatory violation reasons.
+
+9.3 Maya Bank may initiate closure for account misuse exceeding fair or standard use, notifying you to transfer remaining funds to a designated local bank account, and may inform the Bankers Association of the Philippines of such closures.
+
+9.4 Upon an Account Holder's death, the executor, administrator, or legal heirs must notify Maya Bank; withdrawal of funds corresponding to the deceased's ownership interest is subject to required documentation under succession laws.
+
+10. DATA PRIVACY STATEMENT
+
+10.1 You authorize Maya Bank and its official partners to process your personal information per its privacy notices, and agree to Maya Bank's Data Privacy Statement.
+
+11. LIABILITIES
+
+11.1-11.4 You agree to indemnify Maya Bank for losses from your breach of obligations, gross negligence, or willful misconduct; you may be penalized equivalent to damages incurred; Maya Bank agrees to indemnify you for losses from its own breach, gross negligence, or willful misconduct; and neither party is liable for indirect, special, incidental, or consequential damages absent gross negligence or willful misconduct.
+
+12. GOVERNING LAW AND VENUE OF LITIGATION
+
+12.1-12.2 These Terms are governed by Philippine law. Disputes should be resolved amicably and in good faith; unresolved disputes may be brought before Philippine courts, with Mandaluyong City, Metro Manila as a convenience venue, without prejudice to your right to seek assistance from the BSP or other applicable remedies.
+
+13. NON-WAIVER OF RIGHTS
+
+13.1 Failure or delay by Maya Bank to exercise its rights does not constitute a waiver unless made in writing.
+
+14. SEPARABILITY CLAUSE
+
+14.1 If any provision is void or unenforceable, the remaining provisions remain valid.
+
+15. AMENDMENTS
+
+15.1 Maya Bank may amend these Terms at any time, effective sixty (60) days after notice (website publication is sufficient notice). Continued account use after changes constitutes acceptance. Account Holders may reject amendments within thirty (30) days of notice, allowing exit from the contract without penalty.
+
+16. NOTICES
+
+16.1 Notices are sent via in-app notification, SMS, email, or registered mail; website publication is also sufficient.
+
+17. CUSTOMER SERVICE
+
+17.1 Maya Bank aims to address concerns within fifteen (15) calendar days, with updates if more time is needed. Maya Bank is regulated by the Bangko Sentral ng Pilipinas.
+
+18. CORPORATE GOVERNANCE
+
+18.1 Maya Bank's activities are governed by internal Corporate Governance policies compliant with anti-corruption laws. Violations may be reported to Maya Bank's Corporate Governance Office.
+
+ANNEX A: SPECIAL PROVISIONS ON PERSONAL GOALS
+- A maximum of five (5) active Personal Goal accounts are allowed per customer, each with a due date up to 180 days from creation.
+- An active Maya Savings account is required to create a Personal Goal account. No minimum balance is needed, but interest accrues only up to PHP 100,000 per account.
+- Goals may be cancelled anytime via the Maya App, moving funds back to Maya Savings.
+- Proceeds (deposit plus accrued interest, less taxes) are credited to the Maya Savings account upon cancellation or completion.
+- If the linked Maya Savings account becomes dormant, Personal Goal proceeds will not transfer automatically and will not accrue interest until the Savings account is reactivated.
+
+ANNEX B: SPECIAL PROVISIONS ON TIME DEPOSIT PLUS
+- A maximum of five (5) active Time Deposit Plus accounts are allowed per customer, with fixed tenors of 3, 6, or 12 months and a non-modifiable maturity date.
+- No minimum balance is required, but interest accrues only up to PHP 1,000,000 per account; boosted interest requires a minimum PHP 5,000 target goal.
+- Early cancellation is subject to a documentary stamp tax, cancellation fee, and forfeiture of remaining boosted interest (base interest is still credited).
+- Proceeds are automatically credited to the Maya Savings account upon cancellation or maturity, and will not transfer automatically if the Savings account has become dormant.
+
+ANNEX C: SPECIAL PROVISIONS ON EXPRESS DEPOSIT (MAYA BLACK EXPRESS CREDIT CARD)
+- Express Deposit (ED) is an interest-bearing deposit account opened solely to secure a Maya Black Express (MBE) Credit Card, guaranteed by the ED.
+- Under a Deed of Assignment, the ED is irrevocably assigned/held-out to Maya Bank; you may not withdraw or terminate the ED until released, and Maya Bank may debit the hold-out amount to settle outstanding MBE Credit Card obligations upon default.
+- The initial credit limit is set at 80% of the ED amount, subject to periodic reassessment by Maya Bank; adding funds to the ED does not automatically increase the credit limit.
+- The ED may be cancelled anytime, but funds are released only after thirty (30) days, once all outstanding Credit Card balances are settled.
+- Delinquency triggers notification of the outstanding balance, fees, and a payment deadline before the ED is debited; a dispute may be raised within 5-7 business days of the eSOA, during which debiting is suspended if the account remains in good standing.
+- Upon final settlement, any remaining ED balance is released within thirty (30) calendar days, net of applicable fees.
+
+ANNEX D: MOBILE CHECK DEPOSIT
+- The Mobile Check Deposit Facility allows depositing checks by capturing and transmitting images via the Maya app; the Bank's GT&C and Savings T&C are incorporated by reference.
+- Eligibility requires being at least 18 years old, having full legal capacity, and maintaining an active account in good standing; the Bank may approve, deny, suspend, or terminate access at its discretion.
+- Eligible checks must be PHP-denominated, drawn on Philippine banks, current-dated (not more than 6 months old), and payable solely to the account holder's name. Checks payable to "Cash," bearing multiple endorsements, photocopied, post-dated, previously processed, altered, or missing essential information are not accepted.
+- Checks must be endorsed with "For deposit to Maya Bank," signature, account number, and date, with clear front/back images submitted via the app; blurred, incomplete, or improperly endorsed images may be rejected.
+- Deposits are subject to cut-off times and clearing through the Philippine Clearing House Corporation (PCHC), and are not final until cleared. The Bank may impose limits on deposit amount and transaction frequency.
+- Customers are responsible for the accuracy, authenticity, and validity of submitted checks and endorsements, and must not resubmit previously dishonored checks or submit checks known/suspected to be fraudulent.
+- The original check must be retained by the customer and the Bank keeps a digital copy for at least 5 years; the original must be submitted within 5 calendar days upon request by the Bank, drawee bank, court, or regulator.
+- The Bank may reverse or debit deposits for returned, dishonored, fraudulent, or erroneously credited checks, and may debit other accounts to recover amounts if insufficient funds exist.
+- Customers agree to indemnify the Bank for losses arising from reliance on submitted check images, fraudulent or defective checks, unauthorized endorsements, or breach of these terms. The Bank is not liable for delays from clearing systems, third parties, or force majeure, nor for indirect or consequential damages.
+- The Bank monitors transactions for fraud, may require additional verification, and may disclose check-related information to drawee banks, clearing houses, and regulators as required by law.
+
+ADDITIONAL INFORMATION
+Maya Bank Customer Hotline: (+632) 8845-7788
+Domestic Toll-Free: 1-800-1084-57788
+Maya Bank, Inc. is regulated by the Bangko Sentral ng Pilipinas.
+Deposits are insured by PDIC up to PHP 1 Million per depositor.

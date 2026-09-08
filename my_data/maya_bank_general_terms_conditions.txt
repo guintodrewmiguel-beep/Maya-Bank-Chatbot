@@ -1,0 +1,164 @@
+MAYA BANK INC. - GENERAL TERMS AND CONDITIONS
+Source: https://www.mayabank.ph/terms-conditions/
+
+1. GENERAL TERMS AND CONDITIONS
+
+1.1 These general terms and conditions ("GT&C" or "Terms") govern the terms under which you may access or use the website, or avail the products and services of Maya Bank, Inc. By accessing Maya Bank, Inc.'s website, or availing of its products and services, you agree to be bound by this GT&C.
+
+1.2 This GT&C shall be deemed incorporated into the specific terms and conditions of each product of Maya Bank. In case of conflict or inconsistency between this GT&C and the terms and conditions ("T&C") of the product, the terms and conditions of the product will prevail.
+
+1.3 Under this GT&C, the terms "Maya Bank," "Bank," "we," "us," and "our" refer to Maya Bank, Inc., together with its employees, directors, affiliates, successors, agents, and assigns. Maya Bank is a digital bank duly licensed by the Bangko Sentral ng Pilipinas ("BSP").
+
+1.4 The terms "you" and "your" refer to the user of the website, products and services of Maya Bank.
+
+1.5 This GT&C shall be effective, valid, and binding from the time that you signify your agreement to this GT&C, visit the website of Maya Bank or avail any of its product or service. This GT&C will be in full force and effect up to the time that it is terminated by you or us, with the exception of certain provisions which shall remain effective after termination, as may be stated in this GT&C, or under any applicable law, rule, or regulation.
+
+2. DEFINITION OF TERMS
+
+2.1 Affiliates - refer to any person or entity controlled by or under common control with another person. For purposes of the Terms, any of the entities under the MVP Group of Companies, including but not limited to Maya Philippines, Inc., PLDT, Inc., Metro Pacific Investments Corporation, Smart Communications, Inc., The Manila Electric Company, Maynilad Water Services, Inc., Metro Pacific Tollways Corporation, and MediaQuest Holdings, Inc. shall be considered as Affiliates of Maya Bank.
+
+2.2 AMLA - refers to the Anti-Money Laundering Act, otherwise known as Republic Act No. 9160, as amended, as implemented by the Anti-Money Laundering Council of the Philippines ("AMLC").
+
+2.3 Maya App/ Maya Bank Web Portal - mobile or web application that serves as the interface between the user of the products and services and Maya Bank.
+
+3. GENERAL TERMS OF SERVICE
+
+3.1 Maya Bank reserves the right to modify, suspend, stop, or terminate any of its services immediately upon notice, at any time and from time to time, within applicable laws and regulations of the Philippines.
+
+3.2 You will not use any device, software, or routine to interfere or attempt to interfere with the proper working of the Maya App or Maya Bank Web Portal.
+
+3.3 Maya Bank reserves the right to verify any activity that is done through its facilities, especially if it involves compliance with AMLA or with other laws, rules, or regulations. Pursuant to the Implementing Rules and Regulation ("IRR") of the AMLA, you grant Maya Bank the power and authority to report covered and suspicious transactions involving your account to the AMLC, subject to applicable laws and regulations. You shall also authorize Maya Bank to maintain and safely store all records of all transactions involving your account for five (5) years from the dates of these transactions. With respect to closed accounts, Maya Bank shall also preserve and safely store the records on customer identification, account files, and business correspondence for at least five (5) years from the dates when the accounts were closed. In the event of any dispute or litigation involving your Account or your records, Maya Bank reserves the right to retain your records until after the full and final settlement of such dispute or litigation.
+
+3.4 We will attempt to process transactions promptly, but any transaction may be delayed or cancelled for a number of reasons including but not limited to: our efforts to verify your identity; to validate your transaction instructions; to contact you; due to variations in business hours and currency availability; availability of the system; or otherwise to comply with applicable laws, rules, or regulations.
+
+3.5 We may, in our absolute discretion, refuse or cancel transactions or services if: (a) Maya Bank is unable to verify your identity; (b) Maya Bank is unable to verify the identity of the recipient; (c) you do not comply with information requests pursuant to AMLA requirements; or (d) Maya Bank reasonably believes you are using its facilities, or allowing it to be used, in breach of this GT&C or any applicable laws, rules, or regulations.
+
+3.6 If we have executed the transaction in accordance with the instructions you have provided to us, and that the instructions prove to have been incorrect, we are not liable for the incorrect execution of the transaction. We will however make reasonable efforts to recover the funds and may charge a reasonable fee reflective of our efforts to do so.
+
+3.7 Unless restrained or directed otherwise through a written order by the BSP, a court, or government agency of competent jurisdiction, Maya Bank shall have the right to suspend or block any transaction or account, acting reasonably and proportionately, where necessary to comply with applicable laws, rules, and regulations, supervisory directives, licensing conditions, sanctions regimes, court orders, or payment scheme/network rules, or where Maya Bank has reason to believe, based on a documented risk-based assessment, that the transaction or account may be illegal, fraudulent, suspicious, unauthorized, or otherwise presents anti-money laundering/counter-terrorist financing (AML/CFT), cybersecurity, operational, consumer protection, or other safety and soundness risks. Maya Bank may, but shall not have the obligation to, inform you prior to suspending or blocking the transaction. Any suspension or blocking under this Section shall not be arbitrary or unlawfully discriminatory, and where legally permissible, Maya Bank may provide timely notice and a channel for review or appeal. You acknowledge the authority of Maya Bank to suspend or block the transaction and the closure of the account, and shall hold Maya Bank free and harmless against any and all consequences of such suspension or blocking, except to the extent caused by Maya Bank's fraud, gross negligence, or willful misconduct.
+
+3.8 Fees and other charges shall be in accordance with the table of fees and charges (as may be shown in the specific terms and conditions of the products or services) which may be subject to changes upon discretion of Maya Bank and in accordance with laws, rules, and regulations. In situations where there are insufficient funds in your account to cover such fees and other charges, Maya Bank reserves the right, without incurring any liability, to refuse to carry out the transaction.
+
+3.9 In order to comply with our obligations under relevant laws, we reserve the right to require further information or evidence relating to your personal information and to the purpose of any transaction using our facilities.
+
+3.10 You authorize Maya Bank, its Affiliates and/or any of its agents to disclose to third parties any and all personal data you have provided and consent to the use, processing, and storage of such information by Maya Bank, its Affiliates, or its agents or third-parties as may be relevant or necessary to carry out our obligations herein or under any laws and regulations, subject to your rights under the Data Privacy Act of the Philippines and its implementing rules and regulations.
+
+4. YOUR OBLIGATIONS
+
+4.1 You agree to abide by the obligations stated under this section. Failure to abide by these obligations is subject to Maya Bank applying reasonable penalties to you and your account, including but not limited to charges, suspension, and/or termination of your Maya Bank account, and proper reporting to the applicable authority.
+
+4.2 You agree not to use any "deep-link", "page-scrape", "robot", "spider", or other automatic device to access, acquire, copy, or monitor any part of the Maya App or Maya Bank Web Portal, or to obtain any material, document, or information through any means not purposely made available through our facilities.
+
+4.3 You agree not to gain or attempt to gain unauthorized access to any part or feature of the Maya App or Maya Bank Web Portal or to any other connected system or network. You also agree not to gather or harvest information about other users without explicit informed consent, and not to engage in stalking, flaming, spamming, flooding, trolling, or similar disruptive conduct.
+
+4.4 You agree not to circumvent, disable, or otherwise interfere with security-related features of the Maya App or Maya Bank Web Portal.
+
+4.5 You agree not to probe, scan, or test the vulnerability of the Maya App or Maya Bank Web Portal or any connected network, and not to breach security or authentication measures, or reverse look-up or trace information on other users to reveal any information other than your own.
+
+4.6 You agree to use the Maya App or Maya Bank Web Portal for your information and personal use solely as intended, and not to copy, download, transmit, broadcast, or distribute any content unless explicitly permitted.
+
+4.7 You agree not to impose an unreasonable or disproportionately large load on the infrastructure of the Maya App or Maya Bank Web Portal or its systems or networks.
+
+4.8 You agree not to incorporate any defamatory, obscene, or profane word, or any word violating third-party intellectual property rights, in your name or user title, nor use any trademark, trade name, service mark, or logo in a way likely to cause confusion.
+
+4.9 You agree not to use any device or routine to interfere with the proper working of the Maya App or Maya Bank Web Portal or any transaction, or with any other person's use of these facilities.
+
+4.10 You undertake to provide true, accurate, current and complete evidence of your identity, promptly update your personal information when it changes, and provide any identity documentation requested. Concealing your true name or using a fictitious name may subject you to criminal liability under the Anti-Alias Law.
+
+4.11 You agree to update your specimen signature, biometrics, or other pertinent information every three (3) years or earlier when required by Maya Bank, via a written request in the prescribed form.
+
+4.12 Once you confirm a transaction, you agree that you may not cancel nor reverse it. Once funds are credited to the recipient, Maya Bank cannot reverse or deduct the amount without proper court order or authorization of the recipient.
+
+4.13 You agree not to use Maya Bank's facilities for any illegal or unlawful purpose, including selling, leasing, or giving your account to a third party.
+
+4.14 You are responsible for checking for and downloading app updates, and ensuring your device meets minimum system requirements and is protected from viruses and malware.
+
+4.15 You are responsible for securely keeping your PIN, Password, and One-Time PIN (OTP). Use of your User ID and PIN/Password serves as irrevocable authorization for Maya Bank to carry out transactions you initiated. Fraudulent activity by your agents, employees, or representatives using your credentials, including unauthorized withdrawals or transfers, is your sole responsibility. Biometrics authentication is optional and any transactions authorized through it are your sole responsibility.
+
+4.16 By supplying personal information, you expressly consent to its sharing, processing, and storage by Maya Bank, its Affiliates, subsidiaries, officers, employees, agents, lawyers, consultants, and credit bureaus as necessary, or as required by law, subject to existing data privacy and bank secrecy laws.
+
+5. USER REPRESENTATION AND WARRANTIES
+
+5.1 You warrant that you are at least eighteen (18) years of age, or if younger, possess legal parental or guardian consent, and are fully able and competent to legally bind yourself to this GT&C.
+
+5.2 You warrant that all information provided to Maya Bank is true, correct, and accurate, and agree to inform Maya Bank of any changes within fifteen (15) days of their occurrence.
+
+5.3 You take sole responsibility for consequences arising from your use of Maya Bank's facilities, and agree to indemnify Maya Bank for damages resulting from use contrary to this GT&C.
+
+6. RESERVED RIGHTS
+
+6.1 Maya Bank reserves the right to deny access to or discontinue its services, and to reject, suspend, or freeze applications, transactions, or accounts if false, inaccurate, or incomplete information is found, or if there is a violation of applicable law or this GT&C.
+
+6.2 Maya Bank reserves the right to collect, screen, review, flag, filter, modify, block, refuse, or remove any information provided by users, including hardware information, IP address, and browser-type information.
+
+6.3 Maya Bank reserves the right to enhance, improve, develop, and introduce new features to its facilities at any time without prior notice.
+
+6.4 Maya Bank reserves the right to verify, check, cross-refer, and validate information supplied by users through third-party service providers, including telecommunications providers.
+
+6.5 Maya Bank may send service updates and messages via SMS, in-app notifications, or email. Maya Bank warns users to exercise caution against smishing, phishing, and vishing schemes that impersonate Maya Bank, and states it will never ask for OTPs, passwords, PINs, or CVVs via SMS, email, phone, or social media. Legitimate emails come only from @maya.ph or @mayabank.ph domains.
+
+6.6 Maya Bank reserves the right to set limitations on, and charge fees and applicable taxes for, the use of its facilities, and to change such fees upon prior notice.
+
+6.7 Maya Bank reserves the right to enforce the provisions of this GT&C, including performing investigations and legal actions with law enforcement agencies. Non-enforcement of any right shall not be construed as a waiver.
+
+6.8 Maya Bank reserves the right to limit the provision of features or services to specific persons, geographic areas, or market segments, and to operate its services from locations outside the Philippines.
+
+6.9 Maya Bank reserves the right to debit any amount mistakenly credited to your account.
+
+6.10 Maya Bank reserves the right to comply with a notice or order from a court or competent authority for garnishment, attachment, freezing, or sequestration of your accounts. The amount subject to such an order shall automatically be on hold until the order is lifted.
+
+6.11 In the event of a claim or dispute relating to account ownership or operation, conflicting instructions, or a request to freeze the account, Maya Bank reserves the right to take necessary actions such as freezing the account or filing interpleader suits, which are deemed authorized by you.
+
+7. DATA PRIVACY STATEMENT
+
+7.1 You authorize Maya Bank, its Affiliates, and official partners to process personal information provided in data collection touchpoints, relevant to the purposes furnished in Maya Bank's privacy notices.
+
+7.2 With active use of Maya Bank's products and services, you agree to Maya Bank's Data Privacy Policy found at www.mayabank.ph/privacy.
+
+8. LIABILITIES
+
+8.1 You agree to indemnify, defend, and hold harmless Maya Bank, its subsidiaries, Affiliates, and their directors, officers, employees, and agents from losses arising from: breach of your obligations under this GT&C; your gross negligence or willful misconduct; or errors incurred by or judgments/decisions made by you.
+
+8.2 You may be penalized by Maya Bank equivalent to the amount of damage or cost incurred arising from your actions or failure to comply with this GT&C.
+
+8.3 Maya Bank makes no warranty, express or implied, regarding the performance or functionalities of its products and services, which are offered on an "as is," "as available" basis. Maya Bank makes no warranty as to the content, quality, or accuracy of data transmitted; any service or product obtained using its services; that services will be uninterrupted or error-free; or that any particular result will be obtained.
+
+8.4 In the event of any claim against Maya Bank, its liability shall in no event exceed, in the aggregate, the direct damages actually suffered and awarded by a court of competent jurisdiction.
+
+8.5 In no event shall Maya Bank be liable for indirect, special, incidental, or consequential damages, including loss of profits, revenue, data, or savings, even if advised of the possibility of such damages.
+
+9. GOVERNING LAW AND VENUE OF LITIGATION
+
+9.1 This GT&C shall be construed and governed in accordance with the laws of the Philippines.
+
+9.2 Disputes shall be governed by the laws of the Republic of the Philippines. Parties agree to resolve disputes amicably, promptly, and in good faith. If unresolved, either party may bring action before the proper courts of the Philippines, with venue conveniently agreed as Mandaluyong City, Metro Manila, without prejudice to your right to seek assistance from the BSP or other remedies available under applicable law.
+
+10. NON-WAIVER OF RIGHTS BY MAYA BANK
+
+10.1 Failure, omission, or delay by Maya Bank to exercise its rights or remedies under this GT&C shall not operate as a waiver, unless reduced to writing and delivered to you.
+
+11. SEPARABILITY CLAUSE
+
+11.1 Should any term or condition of this GT&C be rendered void, illegal, or unenforceable, the validity of the remaining terms shall not be affected.
+
+12. AMENDMENTS
+
+12.1 Maya Bank may amend, revise, or modify this GT&C at any time, implemented sixty (60) days after notice, with publication on Maya Bank's website considered sufficient notice. Continued use of Maya Bank's services after such changes constitutes acceptance of the new Terms.
+
+13. NOTICES
+
+13.1 Maya Bank shall send notices via in-app notifications, SMS, email, or registered mail to your registered address. Publication on Maya Bank's website is also sufficient notice where required.
+
+14. CUSTOMER SERVICE
+
+14.1 Maya Bank aims to address customer concerns within fifteen (15) days, updating customers if more time is needed. Customers may contact Customer Service through channels listed at www.mayabank.ph/contact-us/. Maya Bank is regulated by the Bangko Sentral ng Pilipinas (www.bsp.gov.ph).
+
+15. CORPORATE GOVERNANCE
+
+15.1 Maya Bank's business activities are regulated by internal business rules and Corporate Governance policies compliant with anti-corruption laws, designed to prevent bribery and enable prompt response to conduct inquiries. Violations may be reported to Maya Bank's Corporate Governance Office.
+
+ADDITIONAL INFORMATION
+Maya Bank Customer Hotline: (+632) 8845-7788
+Domestic Toll-Free: 1-800-1084-57788
+Maya Bank, Inc. is regulated by the Bangko Sentral ng Pilipinas.
+Deposits are insured by PDIC up to PHP 1 Million per depositor.

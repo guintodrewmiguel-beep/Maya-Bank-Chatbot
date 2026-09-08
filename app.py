@@ -1,0 +1,191 @@
+"""
+Streamlit interface for the ITCC508 Maya Bank RAG Chatbot.
+
+This app wraps the exact same pipeline built in
+ITCC508_PT_M1_RAG_MayaBank.ipynb (Document Loading -> Chunking ->
+all-MiniLM-L6-v2 Embeddings -> ChromaDB -> Groq LLM) in a chat UI.
+
+Run it from the SAME folder that contains your `my_data/` directory
+(the one with maya_bank_general_terms_conditions.txt and
+maya_bank_savings_terms_conditions.txt), e.g.:
+
+    streamlit run app.py
+
+Requirements (same as the notebook, plus streamlit):
+    pip install streamlit "langchain<1.0" "langchain-community<1.0" \
+        langchain-groq langchain-huggingface chromadb pypdf unstructured
+"""
+
+import os
+import streamlit as st
+
+from langchain_community.document_loaders import DirectoryLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.vectorstores import Chroma
+from langchain_groq import ChatGroq
+from langchain_core.prompts import ChatPromptTemplate
+from langchain.chains import create_retrieval_chain
+from langchain.chains.combine_documents import create_stuff_documents_chain
+
+DATA_DIR = "my_data"
+MODEL_NAME = "openai/gpt-oss-20b"  # same model used in the notebook
+
+# System prompt variants, matching the three configurations tested in
+# the notebook's hallucination stress-test (Task 3).
+PROMPT_VARIANTS = {
+    "Baseline (grounded, temp=0)": {
+        "temperature": 0,
+        "system_prompt": (
+            "You are a specialized AI assistant for the user's uploaded domain.\n"
+            "Answer questions strictly using ONLY the provided context below.\n"
+            "If the answer cannot be found in the context, reply: "
+            "'I cannot answer based on the provided domain data.'\n\n"
+            "Context:\n{context}"
+        ),
+    },
+    "Fallback removed (temp=1.0)": {
+        "temperature": 1.0,
+        "system_prompt": (
+            "You are a specialized AI assistant for the user's uploaded domain.\n"
+            "Answer questions strictly using ONLY the provided context below.\n\n"
+            "Context:\n{context}"
+        ),
+    },
+    "Fully ungrounded (temp=1.0, no constraints)": {
+        "temperature": 1.0,
+        "system_prompt": (
+            "You are a specialized AI assistant for the user's uploaded domain.\n\n"
+            "Context:\n{context}"
+        ),
+    },
+}
+
+
+st.set_page_config(page_title="Maya Bank T&C Chatbot", page_icon="💬")
+st.title("💬 Maya Bank Terms & Conditions Chatbot")
+st.caption(
+    "A domain-specific RAG chatbot answering questions strictly from Maya Bank's "
+    "General and Savings Terms & Conditions. Built for ITCC508 PT-M1."
+)
+
+# --- Sidebar: API key + configuration ---------------------------------
+with st.sidebar:
+    st.header("Setup")
+
+    # Prefer a key already set via Streamlit Cloud "Secrets" (st.secrets) or
+    # an environment variable, so viewers of a deployed app don't need their
+    # own key. They can still override it below if they want to use their own.
+    default_key = os.environ.get("GROQ_API_KEY", "")
+    if not default_key:
+        try:
+            default_key = st.secrets["GROQ_API_KEY"]
+        except Exception:
+            default_key = ""
+
+    api_key = st.text_input(
+        "Groq API Key",
+        type="password",
+        value=default_key,
+        help="Already configured for this deployment. Only change this if you want to use your own key.",
+    )
+    if api_key:
+        os.environ["GROQ_API_KEY"] = api_key
+
+    st.divider()
+    st.subheader("Grounding configuration")
+    variant_name = st.radio(
+        "Choose a system-prompt / temperature configuration "
+        "(mirrors the notebook's Task 3 stress-test):",
+        list(PROMPT_VARIANTS.keys()),
+        index=0,
+    )
+    st.caption(
+        "Use **Baseline** for normal use. The other two intentionally weaken "
+        "grounding, exactly as in the lab's hallucination stress-test, so you "
+        "can demo the difference live."
+    )
+
+    st.divider()
+    if st.button("Clear chat history"):
+        st.session_state.messages = []
+        st.rerun()
+
+
+# --- Build (and cache) the retriever, once per data folder -------------
+@st.cache_resource(show_spinner="Loading documents and building the vector index...")
+def build_retriever():
+    if not os.path.isdir(DATA_DIR) or not os.listdir(DATA_DIR):
+        return None
+
+    loader = DirectoryLoader(f"{DATA_DIR}/", glob="**/*.*", show_progress=False)
+    raw_documents = loader.load()
+
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+    documents = text_splitter.split_documents(raw_documents)
+
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    vectorstore = Chroma.from_documents(documents=documents, embedding=embeddings)
+    return vectorstore.as_retriever(search_kwargs={"k": 3})
+
+
+def build_chain(retriever, variant):
+    llm = ChatGroq(model_name=MODEL_NAME, temperature=variant["temperature"])
+    prompt = ChatPromptTemplate.from_messages(
+        [("system", variant["system_prompt"]), ("human", "{input}")]
+    )
+    combine_docs_chain = create_stuff_documents_chain(llm, prompt)
+    return create_retrieval_chain(retriever, combine_docs_chain)
+
+
+# --- Guard rails: data folder + API key ---------------------------------
+if not os.path.isdir(DATA_DIR) or not os.listdir(DATA_DIR):
+    st.warning(
+        f"No files found in `./{DATA_DIR}/`. Place your `.txt`/`.pdf` source "
+        f"documents there (same as the notebook) and restart the app."
+    )
+    st.stop()
+
+if not os.environ.get("GROQ_API_KEY"):
+    st.info("Enter your Groq API key in the sidebar to start chatting.")
+    st.stop()
+
+retriever = build_retriever()
+rag_chain = build_chain(retriever, PROMPT_VARIANTS[variant_name])
+
+# --- Chat state -----------------------------------------------------------
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+for msg in st.session_state.messages:
+    with st.chat_message(msg["role"]):
+        st.markdown(msg["content"])
+        if msg["role"] == "assistant" and msg.get("sources"):
+            with st.expander("Retrieved source chunks"):
+                for i, src in enumerate(msg["sources"], 1):
+                    st.markdown(f"**Chunk {i}:** `{src}`")
+
+# --- Chat input -----------------------------------------------------------
+user_query = st.chat_input("Ask about Maya Bank's terms and conditions...")
+
+if user_query:
+    st.session_state.messages.append({"role": "user", "content": user_query})
+    with st.chat_message("user"):
+        st.markdown(user_query)
+
+    with st.chat_message("assistant"):
+        with st.spinner("Thinking..."):
+            response = rag_chain.invoke({"input": user_query})
+            answer = response["answer"]
+            sources = [
+                doc.metadata.get("source", "Unknown") for doc in response["context"]
+            ]
+        st.markdown(answer)
+        if sources:
+            with st.expander("Retrieved source chunks"):
+                for i, src in enumerate(sources, 1):
+                    st.markdown(f"**Chunk {i}:** `{src}`")
+
+    st.session_state.messages.append(
+        {"role": "assistant", "content": answer, "sources": sources}
+    )
