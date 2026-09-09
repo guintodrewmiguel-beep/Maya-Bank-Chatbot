@@ -151,15 +151,31 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+import base64
+
+with open(os.path.join(os.path.dirname(__file__), "assets", "maya_logo.jpg"), "rb") as f:
+    _logo_b64 = base64.b64encode(f.read()).decode()
+
 st.markdown(
-    '<div style="height:8px;background-color:#7EE2A8;border-radius:4px;margin-bottom:1rem;"></div>',
+    f'<div style="text-align:center; margin-bottom:1rem;">'
+    f'<img src="data:image/jpeg;base64,{_logo_b64}" width="160"></div>',
     unsafe_allow_html=True,
 )
 
-st.title("💬 Maya Bank Terms & Conditions Chatbot")
-st.caption(
+st.markdown(
+    '<div style="height:8px;background-color:#7EE2A8;border-radius:4px;margin-bottom:1.5rem;"></div>',
+    unsafe_allow_html=True,
+)
+
+st.markdown(
+    '<h1 style="text-align:center;">Maya Bank Terms &amp; Conditions Chatbot</h1>',
+    unsafe_allow_html=True,
+)
+st.markdown(
+    '<p style="text-align:center; color:#555;">'
     "A domain-specific RAG chatbot answering questions strictly from Maya Bank's "
-    "General and Savings Terms & Conditions. Built for ITCC508 PT-M1."
+    "General and Savings Terms &amp; Conditions. Built for ITCC508 PT-M1.</p>",
+    unsafe_allow_html=True,
 )
 
 # --- Sidebar: API key + configuration ---------------------------------
