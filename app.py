@@ -127,10 +127,22 @@ st.markdown(
         color: #FFFFFF !important;
     }
 
-    /* Chat input box */
+    /* Remove Streamlit's default divider above the bottom chat bar */
+    div[data-testid="stBottom"],
+    div[data-testid="stBottomBlockContainer"] {
+        border-top: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Chat input box - single clean border, no nested duplicates */
     div[data-testid="stChatInput"] {
         border: 1px solid var(--maya-green-dark) !important;
         border-radius: 999px !important;
+        box-shadow: none !important;
+    }
+    div[data-testid="stChatInput"] * {
+        border: none !important;
+        box-shadow: none !important;
     }
 
     /* User chat bubble - mint green */
