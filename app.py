@@ -186,6 +186,33 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+# --- Pipeline diagram: doubles as a live illustration of the architecture ---
+st.markdown(
+    '<p style="text-align:center; font-weight:700; color:#3B1573; margin-top:2rem;">'
+    "How this chatbot works</p>",
+    unsafe_allow_html=True,
+)
+_steps = [
+    ("📄", "Load Docs", "Reads your .txt / .pdf files"),
+    ("✂️", "Chunk", "Splits into 500-char pieces"),
+    ("🧠", "Embed", "all-MiniLM-L6-v2 vectors"),
+    ("🗄️", "ChromaDB", "Stores & indexes vectors"),
+    ("🤖", "Groq LLM", "Retrieves top-3 & answers"),
+]
+_cols = st.columns(len(_steps))
+for _col, (_icon, _title, _desc) in zip(_cols, _steps):
+    with _col:
+        st.markdown(
+            f'<div style="text-align:center; background-color:#F4FBF7; '
+            f'border:1px solid #7EE2A8; border-radius:12px; padding:0.75rem 0.25rem;">'
+            f'<div style="font-size:1.8rem;">{_icon}</div>'
+            f'<div style="font-weight:700; color:#3B1573; font-size:0.85rem;">{_title}</div>'
+            f'<div style="font-size:0.7rem; color:#666;">{_desc}</div>'
+            f'</div>',
+            unsafe_allow_html=True,
+        )
+st.markdown("<br>", unsafe_allow_html=True)
+
 # --- Sidebar: API key + configuration ---------------------------------
 with st.sidebar:
     st.header("Setup")
@@ -288,12 +315,46 @@ if not os.environ.get("GROQ_API_KEY"):
 retriever = build_retriever()
 rag_chain = build_chain(retriever, PROMPT_VARIANTS[variant_name])
 
+# --- Live parameters strip (mirrors the parameter table your report needs) --
+_params = [
+    ("Chunk size", "500"),
+    ("Overlap", "50"),
+    ("Top-k", "3"),
+    ("Temperature", str(PROMPT_VARIANTS[variant_name]["temperature"])),
+    ("Model", "gpt-oss-20b"),
+]
+_pcols = st.columns(len(_params))
+for _pcol, (_label, _value) in zip(_pcols, _params):
+    _pcol.metric(_label, _value)
+st.markdown("<br>", unsafe_allow_html=True)
+
 # --- Chat state -----------------------------------------------------------
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
+LOGO_PATH = os.path.join(os.path.dirname(__file__), "assets", "maya_logo.jpg")
+
+# --- Example question chips --------------------------------------------
+if "pending_query" not in st.session_state:
+    st.session_state.pending_query = None
+
+st.markdown(
+    '<p style="font-weight:700; color:#3B1573;">💡 Try asking:</p>',
+    unsafe_allow_html=True,
+)
+_example_qs = [
+    "What is the PDIC insurance coverage for my account?",
+    "Can Maya suspend my account without notice?",
+    "How do I close my Maya savings account?",
+]
+_chip_cols = st.columns(len(_example_qs))
+for _ccol, _q in zip(_chip_cols, _example_qs):
+    if _ccol.button(_q, use_container_width=True, key=f"chip_{_q}"):
+        st.session_state.pending_query = _q
+
 for msg in st.session_state.messages:
-    with st.chat_message(msg["role"]):
+    avatar = LOGO_PATH if msg["role"] == "assistant" else "🧑"
+    with st.chat_message(msg["role"], avatar=avatar):
         st.markdown(msg["content"])
         if msg["role"] == "assistant" and msg.get("sources"):
             with st.expander("Retrieved source chunks"):
@@ -302,13 +363,16 @@ for msg in st.session_state.messages:
 
 # --- Chat input -----------------------------------------------------------
 user_query = st.chat_input("Ask about Maya Bank's terms and conditions...")
+if not user_query and st.session_state.pending_query:
+    user_query = st.session_state.pending_query
+    st.session_state.pending_query = None
 
 if user_query:
     st.session_state.messages.append({"role": "user", "content": user_query})
-    with st.chat_message("user"):
+    with st.chat_message("user", avatar="🧑"):
         st.markdown(user_query)
 
-    with st.chat_message("assistant"):
+    with st.chat_message("assistant", avatar=LOGO_PATH):
         with st.spinner("Thinking..."):
             response = rag_chain.invoke({"input": user_query})
             answer = response["answer"]
