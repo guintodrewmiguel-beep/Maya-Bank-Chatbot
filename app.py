@@ -106,17 +106,25 @@ st.markdown(
     }
 
     /* Buttons styled like Maya's black pill button */
-    .stButton > button {
+    .stButton > button,
+    .stButton > button p,
+    .stButton > button span,
+    .stButton > button div {
         background-color: var(--maya-black);
-        color: #FFFFFF;
+        color: #FFFFFF !important;
         border-radius: 999px;
         border: none;
         font-weight: 600;
+    }
+    .stButton > button {
         padding: 0.5rem 1.5rem;
     }
-    .stButton > button:hover {
+    .stButton > button:hover,
+    .stButton > button:hover p,
+    .stButton > button:hover span,
+    .stButton > button:hover div {
         background-color: var(--maya-purple);
-        color: #FFFFFF;
+        color: #FFFFFF !important;
     }
 
     /* Chat input box */
@@ -182,22 +190,34 @@ st.markdown(
 with st.sidebar:
     st.header("Setup")
 
-    # Prefer a key already set via Streamlit Cloud "Secrets" (st.secrets) or
-    # an environment variable, so viewers of a deployed app don't need their
-    # own key. They can still override it below if they want to use their own.
-    default_key = os.environ.get("GROQ_API_KEY", "")
-    if not default_key:
+    # If a key is already configured via Streamlit Cloud "Secrets" or an
+    # environment variable, use it silently in the backend — never place a
+    # real secret into a text_input, since password fields can be revealed
+    # by anyone with the "eye" icon. Only offer an empty override box.
+    configured_key = os.environ.get("GROQ_API_KEY", "")
+    if not configured_key:
         try:
-            default_key = st.secrets["GROQ_API_KEY"]
+            configured_key = st.secrets["GROQ_API_KEY"]
         except Exception:
-            default_key = ""
+            configured_key = ""
 
-    api_key = st.text_input(
-        "Groq API Key",
-        type="password",
-        value=default_key,
-        help="Already configured for this deployment. Only change this if you want to use your own key.",
-    )
+    if configured_key:
+        st.success("Groq API key is already configured for this app. ✅")
+        override_key = st.text_input(
+            "Use a different Groq API Key (optional)",
+            type="password",
+            value="",
+            help="Leave blank to use the app's configured key.",
+        )
+        api_key = override_key or configured_key
+    else:
+        api_key = st.text_input(
+            "Groq API Key",
+            type="password",
+            value="",
+            help="Get one at https://console.groq.com. Never shown or logged in plain text.",
+        )
+
     if api_key:
         os.environ["GROQ_API_KEY"] = api_key
 
