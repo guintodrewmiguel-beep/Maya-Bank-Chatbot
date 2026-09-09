@@ -292,7 +292,7 @@ rag_chain = build_chain(retriever, PROMPT_VARIANTS[variant_name])
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-LOGO_PATH = os.path.join(os.path.dirname(__file__), "assets", "maya_logo.jpg")
+LOGO_PATH = os.path.join(os.path.dirname(__file__), "assets", "maya_avatar.png")
 
 # --- Frequently Asked Questions (horizontally scrollable) ---------------
 if "pending_query" not in st.session_state:
@@ -348,10 +348,19 @@ st.markdown(
         border-color: #56D191 !important;
     }
     .st-key-faq_scroll_container .stButton > button:focus,
+    .st-key-faq_scroll_container .stButton > button:focus-visible,
     .st-key-faq_scroll_container .stButton > button:focus:not(:active),
-    .st-key-faq_scroll_container .stButton > button:active {
+    .st-key-faq_scroll_container .stButton > button:active,
+    .st-key-faq_scroll_container .stButton > button *:focus,
+    .st-key-faq_scroll_container .stButton > button *:focus-visible {
         box-shadow: none !important;
         outline: none !important;
+        text-decoration: none !important;
+        border: none !important;
+    }
+    .st-key-faq_scroll_container .stButton > button:focus,
+    .st-key-faq_scroll_container .stButton > button:focus-visible,
+    .st-key-faq_scroll_container .stButton > button:active {
         border: 1.5px solid #7EE2A8 !important;
     }
     </style>
@@ -365,7 +374,7 @@ with st.container(key="faq_scroll_container"):
             st.session_state.pending_query = _q
 
 for msg in st.session_state.messages:
-    avatar = LOGO_PATH if msg["role"] == "assistant" else "🧑"
+    avatar = LOGO_PATH if msg["role"] == "assistant" else None
     with st.chat_message(msg["role"], avatar=avatar):
         st.markdown(msg["content"])
         if msg["role"] == "assistant" and msg.get("sources"):
@@ -381,7 +390,7 @@ if not user_query and st.session_state.pending_query:
 
 if user_query:
     st.session_state.messages.append({"role": "user", "content": user_query})
-    with st.chat_message("user", avatar="🧑"):
+    with st.chat_message("user"):
         st.markdown(user_query)
 
     with st.chat_message("assistant", avatar=LOGO_PATH):
