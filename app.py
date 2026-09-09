@@ -288,19 +288,6 @@ if not os.environ.get("GROQ_API_KEY"):
 retriever = build_retriever()
 rag_chain = build_chain(retriever, PROMPT_VARIANTS[variant_name])
 
-# --- Live parameters strip (mirrors the parameter table your report needs) --
-_params = [
-    ("Chunk size", "500"),
-    ("Overlap", "50"),
-    ("Top-k", "3"),
-    ("Temperature", str(PROMPT_VARIANTS[variant_name]["temperature"])),
-    ("Model", "gpt-oss-20b"),
-]
-_pcols = st.columns(len(_params))
-for _pcol, (_label, _value) in zip(_pcols, _params):
-    _pcol.metric(_label, _value)
-st.markdown("<br>", unsafe_allow_html=True)
-
 # --- Chat state -----------------------------------------------------------
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -312,7 +299,7 @@ if "pending_query" not in st.session_state:
     st.session_state.pending_query = None
 
 st.markdown(
-    '<p style="font-weight:700; color:#3B1573;">❓ Frequently Asked Questions</p>',
+    '<p style="font-weight:700; color:#3B1573;">Frequently Asked Questions</p>',
     unsafe_allow_html=True,
 )
 _faq_questions = [
@@ -339,10 +326,26 @@ st.markdown(
         width: 240px !important;
         flex: 0 0 auto !important;
     }
-    .st-key-faq_scroll_container .stButton > button {
+    .st-key-faq_scroll_container .stButton > button,
+    .st-key-faq_scroll_container .stButton > button p,
+    .st-key-faq_scroll_container .stButton > button span,
+    .st-key-faq_scroll_container .stButton > button div {
+        background-color: #F4FBF7 !important;
+        color: #3B1573 !important;
+        border: 1.5px solid #7EE2A8 !important;
+        border-radius: 12px !important;
         white-space: normal;
         height: 100%;
         min-height: 3rem;
+        font-weight: 600;
+    }
+    .st-key-faq_scroll_container .stButton > button:hover,
+    .st-key-faq_scroll_container .stButton > button:hover p,
+    .st-key-faq_scroll_container .stButton > button:hover span,
+    .st-key-faq_scroll_container .stButton > button:hover div {
+        background-color: #7EE2A8 !important;
+        color: #3B1573 !important;
+        border-color: #56D191 !important;
     }
     </style>
     """,
