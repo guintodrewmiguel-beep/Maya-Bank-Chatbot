@@ -134,15 +134,20 @@ st.markdown(
         box-shadow: none !important;
     }
 
-    /* Chat input box - single clean border, no nested duplicates */
-    div[data-testid="stChatInput"] {
-        border: 1px solid var(--maya-green-dark) !important;
-        border-radius: 999px !important;
-        box-shadow: none !important;
-    }
-    div[data-testid="stChatInput"] * {
+    /* Chat input: strip every border/shadow the native widget adds internally,
+       then draw exactly one pill border on its actual parent wrapper */
+    div[data-testid="stChatInput"],
+    div[data-testid="stChatInput"] *,
+    div[data-testid="stChatInput"] *::before,
+    div[data-testid="stChatInput"] *::after {
         border: none !important;
         box-shadow: none !important;
+        outline: none !important;
+    }
+    div:has(> div[data-testid="stChatInput"]) {
+        border: 1px solid var(--maya-green-dark) !important;
+        border-radius: 999px !important;
+        overflow: hidden;
     }
 
     /* User chat bubble - mint green */
