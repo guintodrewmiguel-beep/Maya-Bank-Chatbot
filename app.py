@@ -186,33 +186,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# --- Pipeline diagram: doubles as a live illustration of the architecture ---
-st.markdown(
-    '<p style="text-align:center; font-weight:700; color:#3B1573; margin-top:2rem;">'
-    "How this chatbot works</p>",
-    unsafe_allow_html=True,
-)
-_steps = [
-    ("📄", "Load Docs", "Reads your .txt / .pdf files"),
-    ("✂️", "Chunk", "Splits into 500-char pieces"),
-    ("🧠", "Embed", "all-MiniLM-L6-v2 vectors"),
-    ("🗄️", "ChromaDB", "Stores & indexes vectors"),
-    ("🤖", "Groq LLM", "Retrieves top-3 & answers"),
-]
-_cols = st.columns(len(_steps))
-for _col, (_icon, _title, _desc) in zip(_cols, _steps):
-    with _col:
-        st.markdown(
-            f'<div style="text-align:center; background-color:#F4FBF7; '
-            f'border:1px solid #7EE2A8; border-radius:12px; padding:0.75rem 0.25rem;">'
-            f'<div style="font-size:1.8rem;">{_icon}</div>'
-            f'<div style="font-weight:700; color:#3B1573; font-size:0.85rem;">{_title}</div>'
-            f'<div style="font-size:0.7rem; color:#666;">{_desc}</div>'
-            f'</div>',
-            unsafe_allow_html=True,
-        )
-st.markdown("<br>", unsafe_allow_html=True)
-
 # --- Sidebar: API key + configuration ---------------------------------
 with st.sidebar:
     st.header("Setup")
@@ -334,23 +307,52 @@ if "messages" not in st.session_state:
 
 LOGO_PATH = os.path.join(os.path.dirname(__file__), "assets", "maya_logo.jpg")
 
-# --- Example question chips --------------------------------------------
+# --- Frequently Asked Questions (horizontally scrollable) ---------------
 if "pending_query" not in st.session_state:
     st.session_state.pending_query = None
 
 st.markdown(
-    '<p style="font-weight:700; color:#3B1573;">💡 Try asking:</p>',
+    '<p style="font-weight:700; color:#3B1573;">❓ Frequently Asked Questions</p>',
     unsafe_allow_html=True,
 )
-_example_qs = [
+_faq_questions = [
     "What is the PDIC insurance coverage for my account?",
     "Can Maya suspend my account without notice?",
     "How do I close my Maya savings account?",
+    "What fees apply to maintaining a Maya Bank account?",
+    "Is there a minimum balance requirement?",
+    "How is interest calculated on my savings account?",
+    "What happens if I violate the terms and conditions?",
+    "How do I dispute a transaction on my account?",
 ]
-_chip_cols = st.columns(len(_example_qs))
-for _ccol, _q in zip(_chip_cols, _example_qs):
-    if _ccol.button(_q, use_container_width=True, key=f"chip_{_q}"):
-        st.session_state.pending_query = _q
+st.markdown(
+    """
+    <style>
+    .st-key-faq_scroll_container div[data-testid="stHorizontalBlock"] {
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        padding-bottom: 0.5rem;
+        gap: 0.5rem;
+    }
+    .st-key-faq_scroll_container div[data-testid="stColumn"] {
+        min-width: 240px !important;
+        width: 240px !important;
+        flex: 0 0 auto !important;
+    }
+    .st-key-faq_scroll_container .stButton > button {
+        white-space: normal;
+        height: 100%;
+        min-height: 3rem;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+with st.container(key="faq_scroll_container"):
+    _faq_cols = st.columns(len(_faq_questions))
+    for _fcol, _q in zip(_faq_cols, _faq_questions):
+        if _fcol.button(_q, use_container_width=True, key=f"faq_{_q}"):
+            st.session_state.pending_query = _q
 
 for msg in st.session_state.messages:
     avatar = LOGO_PATH if msg["role"] == "assistant" else "🧑"
