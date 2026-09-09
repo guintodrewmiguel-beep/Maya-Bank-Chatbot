@@ -244,7 +244,7 @@ with st.sidebar:
         "Choose a system-prompt / temperature configuration "
         "(mirrors the notebook's Task 3 stress-test):",
         list(PROMPT_VARIANTS.keys()),
-        index=0,
+        index=1,
     )
     st.caption(
         "Use **Baseline** for normal use. The other two intentionally weaken "
