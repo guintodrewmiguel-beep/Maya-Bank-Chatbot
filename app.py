@@ -80,15 +80,6 @@ st.markdown(
         background-color: #FFFFFF;
     }
 
-    /* Top banner strip mimicking Maya's nav bar */
-    .stApp::before {
-        content: "";
-        display: block;
-        height: 8px;
-        background-color: var(--maya-green);
-        margin: -1rem -1rem 1rem -1rem;
-    }
-
     /* Titles and headers in Maya purple */
     h1, h2, h3, .stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
         color: var(--maya-purple) !important;
@@ -129,8 +120,8 @@ st.markdown(
     }
 
     /* Chat input box */
-    .stChatInput textarea, div[data-testid="stChatInput"] {
-        border: 2px solid var(--maya-green) !important;
+    div[data-testid="stChatInput"] {
+        border: 1px solid var(--maya-green-dark) !important;
         border-radius: 999px !important;
     }
 
@@ -157,6 +148,11 @@ st.markdown(
     }
     </style>
     """,
+    unsafe_allow_html=True,
+)
+
+st.markdown(
+    '<div style="height:8px;background-color:#7EE2A8;border-radius:4px;margin-bottom:1rem;"></div>',
     unsafe_allow_html=True,
 )
 
