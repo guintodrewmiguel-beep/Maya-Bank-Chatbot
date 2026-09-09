@@ -327,7 +327,6 @@ _faq_questions = [
     "Is there a minimum balance requirement?",
     "How is interest calculated on my savings account?",
     "What happens if I violate the terms and conditions?",
-    "How do I dispute a transaction on my account?",
 ]
 st.markdown(
     """
