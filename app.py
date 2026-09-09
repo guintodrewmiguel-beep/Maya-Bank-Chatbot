@@ -347,6 +347,13 @@ st.markdown(
         color: #3B1573 !important;
         border-color: #56D191 !important;
     }
+    .st-key-faq_scroll_container .stButton > button:focus,
+    .st-key-faq_scroll_container .stButton > button:focus:not(:active),
+    .st-key-faq_scroll_container .stButton > button:active {
+        box-shadow: none !important;
+        outline: none !important;
+        border: 1.5px solid #7EE2A8 !important;
+    }
     </style>
     """,
     unsafe_allow_html=True,
