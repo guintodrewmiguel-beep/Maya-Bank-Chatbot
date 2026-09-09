@@ -326,12 +326,8 @@ st.markdown(
         width: 240px !important;
         flex: 0 0 auto !important;
     }
-    .st-key-faq_scroll_container .stButton > button,
-    .st-key-faq_scroll_container .stButton > button p,
-    .st-key-faq_scroll_container .stButton > button span,
-    .st-key-faq_scroll_container .stButton > button div {
+    .st-key-faq_scroll_container .stButton > button {
         background-color: #F4FBF7 !important;
-        color: #3B1573 !important;
         border: 1.5px solid #7EE2A8 !important;
         border-radius: 12px !important;
         white-space: normal;
@@ -339,29 +335,35 @@ st.markdown(
         min-height: 3rem;
         font-weight: 600;
     }
-    .st-key-faq_scroll_container .stButton > button:hover,
+    .st-key-faq_scroll_container .stButton > button p,
+    .st-key-faq_scroll_container .stButton > button span,
+    .st-key-faq_scroll_container .stButton > button div {
+        background-color: transparent !important;
+        color: #3B1573 !important;
+        border: none !important;
+        outline: none !important;
+    }
+    .st-key-faq_scroll_container .stButton > button:hover {
+        background-color: #7EE2A8 !important;
+        border-color: #56D191 !important;
+    }
     .st-key-faq_scroll_container .stButton > button:hover p,
     .st-key-faq_scroll_container .stButton > button:hover span,
     .st-key-faq_scroll_container .stButton > button:hover div {
-        background-color: #7EE2A8 !important;
         color: #3B1573 !important;
-        border-color: #56D191 !important;
-    }
-    .st-key-faq_scroll_container .stButton > button:focus,
-    .st-key-faq_scroll_container .stButton > button:focus-visible,
-    .st-key-faq_scroll_container .stButton > button:focus:not(:active),
-    .st-key-faq_scroll_container .stButton > button:active,
-    .st-key-faq_scroll_container .stButton > button *:focus,
-    .st-key-faq_scroll_container .stButton > button *:focus-visible {
-        box-shadow: none !important;
-        outline: none !important;
-        text-decoration: none !important;
-        border: none !important;
     }
     .st-key-faq_scroll_container .stButton > button:focus,
     .st-key-faq_scroll_container .stButton > button:focus-visible,
     .st-key-faq_scroll_container .stButton > button:active {
+        box-shadow: none !important;
+        outline: none !important;
         border: 1.5px solid #7EE2A8 !important;
+    }
+    .st-key-faq_scroll_container .stButton > button *:focus,
+    .st-key-faq_scroll_container .stButton > button *:focus-visible {
+        box-shadow: none !important;
+        outline: none !important;
+        border: none !important;
     }
     </style>
     """,
@@ -374,13 +376,14 @@ with st.container(key="faq_scroll_container"):
             st.session_state.pending_query = _q
 
 for msg in st.session_state.messages:
-    avatar = LOGO_PATH if msg["role"] == "assistant" else None
-    with st.chat_message(msg["role"], avatar=avatar):
-        st.markdown(msg["content"])
-        if msg["role"] == "assistant" and msg.get("sources"):
-            with st.expander("Retrieved source chunks"):
-                for i, src in enumerate(msg["sources"], 1):
-                    st.markdown(f"**Chunk {i}:** `{src}`")
+    if msg["role"] == "user":
+        st.markdown(
+            f'<p style="font-weight:600; margin:0.75rem 0;">{msg["content"]}</p>',
+            unsafe_allow_html=True,
+        )
+    else:
+        with st.chat_message("assistant", avatar=LOGO_PATH):
+            st.markdown(msg["content"])
 
 # --- Chat input -----------------------------------------------------------
 user_query = st.chat_input("Ask about Maya Bank's terms and conditions...")
@@ -390,22 +393,15 @@ if not user_query and st.session_state.pending_query:
 
 if user_query:
     st.session_state.messages.append({"role": "user", "content": user_query})
-    with st.chat_message("user"):
-        st.markdown(user_query)
+    st.markdown(
+        f'<p style="font-weight:600; margin:0.75rem 0;">{user_query}</p>',
+        unsafe_allow_html=True,
+    )
 
     with st.chat_message("assistant", avatar=LOGO_PATH):
         with st.spinner("Thinking..."):
             response = rag_chain.invoke({"input": user_query})
             answer = response["answer"]
-            sources = [
-                doc.metadata.get("source", "Unknown") for doc in response["context"]
-            ]
         st.markdown(answer)
-        if sources:
-            with st.expander("Retrieved source chunks"):
-                for i, src in enumerate(sources, 1):
-                    st.markdown(f"**Chunk {i}:** `{src}`")
 
-    st.session_state.messages.append(
-        {"role": "assistant", "content": answer, "sources": sources}
-    )
+    st.session_state.messages.append({"role": "assistant", "content": answer})
